@@ -1,0 +1,217 @@
+/* Light Mode Global CSS */
+:root {
+  /* Color Variables */
+  --light-bg: rgb(125, 152, 201);
+  --light-surface: rgb(67, 126, 255);
+  --light-border: rgb(3, 123, 202);
+  --light-text-primary: rgb(255, 255, 255);
+  --light-text-secondary: rgb(255, 255, 255);
+  --light-accent: rgb(255, 255, 255);
+  --light-accent-hover: rgb(2, 44, 85);
+  --light-error: #dc3545;
+  --light-success: #28a745;
+  --light-warning: #ffc107;
+
+  /* Shadows */
+  --light-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --light-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --light-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Apply Light Mode */
+body.light-mode {
+  background-color: var(--light-bg);
+  color: var(--light-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Text Styles */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6 {
+  color: var(--light-text-primary);
+  text-shadow: var(light-shadow-sm);
+}
+
+body.light-mode p,
+body.light-mode span,
+body.light-mode label {
+  color: var(--light-text-secondary);
+}
+
+/* Links */
+body.light-mode a {
+  color: var(--light-accent);
+  text-decoration: none;
+}
+
+body.light-mode a:hover {
+  color: var(--light-accent-hover);
+  text-decoration: underline;
+}
+
+/* Buttons */
+body.light-mode button,
+body.light-mode .button {
+  background-color: var(--light-surface);
+  color: var(--light-text-primary);
+  border: 1px solid var(--light-border);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+body.light-mode button:hover,
+body.light-mode .button:hover {
+  background-color: var(--light-accent);
+  color: white;
+}
+
+/* Form Elements */
+body.light-mode input,
+body.light-mode textarea,
+body.light-mode select {
+  background-color: var(--light-surface);
+  color: var(--light-text-primary);
+  border: 1px solid var(--light-border);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+body.light-mode input:focus,
+body.light-mode textarea:focus,
+body.light-mode select:focus {
+  border-color: var(--light-accent);
+  outline: none;
+}
+
+/* Cards */
+body.light-mode .card {
+  background-color: var(--light-surface);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: var(--light-shadow-sm);
+}
+
+/* Card components for movie app */
+body.light-mode .card--image {
+  border-radius: 4px;
+  box-shadow: var(--light-shadow-sm);
+}
+
+body.light-mode .card--content {
+  padding-top: 12px;
+}
+
+body.light-mode .card--title {
+  margin-bottom: 8px;
+}
+
+body.light-mode .card--desc {
+  color: var(--light-text-secondary);
+}
+
+/* Form components for movie app */
+body.light-mode .form {
+  background-color: var(--light-border);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+body.light-mode .label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+body.light-mode .input {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Navbar */
+body.light-mode .navbar {
+  background-color: var(--light-border);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .navbar-search-input {
+  background-color: var(--light-border);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .navbar-sort {
+  background-color: var(--light-border);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .nav-link {
+  color: var(--light-text-primary);
+}
+
+body.light-mode .nav-link:hover {
+  color: var(--light-accent);
+}
+
+/* Tables */
+body.light-mode table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+body.light-mode th,
+body.light-mode td {
+  border: 1px solid var(--light-border);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+body.light-mode th {
+  background-color: #f7f7f7;
+}
+
+/* Code Blocks */
+body.light-mode code,
+body.light-mode pre {
+  background-color: var(--light-bg);
+  color: #333;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-family: "Courier New", monospace;
+}
+
+body.light-mode pre {
+  padding: 12px;
+  overflow-x: auto;
+}
+
+/* Scrollbar */
+body.light-mode ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body.light-mode ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body.light-mode ::-webkit-scrollbar-thumb {
+  background: #cdcdcd;
+  border-radius: 5px;
+}
+
+body.light-mode ::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* Card list container */
+body.light-mode .card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}

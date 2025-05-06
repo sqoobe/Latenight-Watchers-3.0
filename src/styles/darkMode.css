@@ -1,0 +1,224 @@
+/* Dark Mode Global CSS */
+:root {
+  /* Color Variables */
+  --dark-bg: #121212;
+  --dark-surface: #1e1e1e;
+  --dark-border: #333333;
+  --dark-text-primary: #ffffff;
+  --dark-text-secondary: #b0b0b0;
+  --dark-accent: #7289da;
+  --dark-accent-hover: #8ea1e1;
+  --dark-error: #cf6679;
+  --dark-success: #4caf50;
+  --dark-warning: #ff9800;
+
+  /* Shadows */
+  --dark-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --dark-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5);
+  --dark-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Apply Dark Mode */
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Text Styles */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: var(--dark-text-primary);
+}
+
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode label {
+  color: var(--dark-text-secondary);
+}
+
+/* Links */
+body.dark-mode a {
+  color: var(--dark-accent);
+  text-decoration: none;
+}
+
+body.dark-mode a:hover {
+  color: var(--dark-accent-hover);
+  text-decoration: underline;
+}
+
+/* Buttons */
+body.dark-mode button,
+body.dark-mode .button {
+  background-color: var(--dark-surface);
+  color: var(--dark-text-primary);
+  border: 1px solid var(--dark-border);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+body.dark-mode button:hover,
+body.dark-mode .button:hover {
+  background-color: var(--dark-accent);
+  color: white;
+}
+
+/* Form Elements */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: var(--dark-surface);
+  color: var(--dark-text-primary);
+  border: 1px solid var(--dark-border);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+  border-color: var(--dark-accent);
+  outline: none;
+}
+
+/* Cards */
+body.dark-mode .card {
+  background-color: var(--dark-surface);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: var(--dark-shadow-sm);
+}
+
+/* Card components for movie app */
+body.dark-mode .card--image {
+  border-radius: 4px;
+  box-shadow: var(--dark-shadow-sm);
+}
+
+body.dark-mode .card--content {
+  padding-top: 12px;
+}
+
+body.dark-mode .card--title {
+  margin-bottom: 8px;
+}
+
+body.dark-mode .card--desc {
+  color: var(--dark-text-secondary);
+}
+
+/* Form components for movie app */
+body.dark-mode .form {
+  background-color: var(--dark-surface);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+body.dark-mode .label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+body.dark-mode .input {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Tables */
+body.dark-mode table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+  border: 1px solid var(--dark-border);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+body.dark-mode th {
+  background-color: var(--dark-surface);
+}
+
+/* Code Blocks */
+body.dark-mode code,
+body.dark-mode pre {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-family: "Courier New", monospace;
+}
+
+body.dark-mode pre {
+  padding: 12px;
+  overflow-x: auto;
+}
+
+/* Scrollbar */
+body.dark-mode ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: var(--dark-border);
+  border-radius: 5px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Card list container */
+body.dark-mode .card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card--title {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.card--image {
+  margin: 0 auto;
+  display: block;
+}
+.form {
+  display: grid;
+}
+.label {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
+
+body.dark-mode .navbar {
+  background-color: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .navbar-search-input {
+  background-color: rgba(30, 30, 30, 0.95);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .navbar-sort {
+  background-color: rgba(30, 30, 30, 0.95);
+  border-color: rgba(255, 255, 255, 0.2);
+}

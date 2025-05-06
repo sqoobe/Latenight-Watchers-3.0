@@ -1,0 +1,167 @@
+/* Navbar styles */
+.navbar {
+  background-color: #1a1a1a;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff6b6b;
+}
+
+/* Sort container styles */
+.sort-container {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sort-select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* Card action buttons */
+.card--actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.favorite-btn,
+.watchlist-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.favorite-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.favorite-btn.active {
+  background-color: #ff4444;
+}
+
+.watchlist-btn {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.watchlist-btn.active {
+  background-color: #357abd;
+}
+
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Existing styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card--image {
+  width: 100%;
+  height: auto;
+}
+
+.card--content {
+  padding: 1rem;
+}
+
+.card--title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.card--desc {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
