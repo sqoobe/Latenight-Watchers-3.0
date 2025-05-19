@@ -11,6 +11,7 @@ body {
   padding: 0;
   background-color: rgb(244, 244, 244);
   color: #333;
+  font-family: "Roboto", sans-serif;
 }
 
 p {
@@ -34,7 +35,7 @@ small {
   display: grid;
 }
 .label {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   margin-bottom: 0.2rem;
   text-transform: uppercase;
 }
@@ -91,6 +92,8 @@ small {
 .card--title {
   margin-bottom: 0.5rem;
   font-size: 3.2rem;
+  font-family: "Monda", sans-serif;
+  font-weight: 700;
 }
 
 .card--image {
@@ -133,8 +136,9 @@ small {
 .navbar-logo {
   color: var(--text-primary);
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2.3rem;
   font-weight: bold;
+  font-family: "Monda", sans-serif;
 }
 
 .nav-menu {
@@ -154,6 +158,7 @@ small {
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
+  font-family: "Monda", sans-serif;
 }
 
 .nav-link:hover {
@@ -250,6 +255,8 @@ small {
 .card--title {
   margin: 0 0 0.5rem 0;
   font-size: 2.3rem;
+  font-family: "Monda", sans-serif;
+  font-weight: 700;
 }
 
 .card--desc {
@@ -502,4 +509,74 @@ body.light-mode .read-more-button:hover {
   line-height: 1.5;
   color: var(--dark-text-secondary);
   margin: 0;
+}
+/* Sort container styles */
+.sort-container {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sort-select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* Card action buttons */
+.card--actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.favorite-btn,
+.watchlist-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.favorite-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.favorite-btn.active {
+  background-color: #ff4444;
+}
+
+.watchlist-btn {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.watchlist-btn.active {
+  background-color: #357abd;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: var(--dark-surface);
+  color: var(--dark-text-primary);
+  border: 1px solid var(--dark-border);
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+body.dark-mode .input {
+  width: 100%;
+  margin-bottom: -1px;
+}
+
+body.dark-mode .label {
+  display: block;
+  margin-bottom: -5px;
 }
